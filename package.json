@@ -1,6 +1,6 @@
 {
   "name": "fastify-secrets-env",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Fastify secrets plugin for environment variables",
   "main": "lib/fastify-secrets-env.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "node": ">= 12.13.0"
   },
   "dependencies": {
-    "fastify-secrets-core": "0.0.1"
+    "fastify-secrets-core": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^7.11.0",
