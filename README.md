@@ -1,5 +1,7 @@
 # Fastify Secrets Env
 
+![CI](https://github.com/nearform/fastify-secrets-env/workflows/CI/badge.svg)
+
 Fastify secrets plugin for environment variables
 
 > This plugin is mostly intended for your local dev environmemt where you may want to use the same api as production-ready plugins like [fastify-secrets-gcp] whilest still reading config from environment variables.
