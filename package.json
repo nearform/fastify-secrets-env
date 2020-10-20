@@ -1,0 +1,58 @@
+{
+  "name": "fastify-secrets-env",
+  "version": "0.0.1",
+  "description": "Fastify secrets plugin for environment variables",
+  "main": "lib/fastify-secrets-env.js",
+  "scripts": {
+    "lint": "eslint lib/**/*.js test/**/*.js",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:staged": "lint-staged",
+    "test": "tap --reporter=spec --coverage-report=html --coverage-report=text --100 --no-browser test/*.test.js test/**/*.test.js",
+    "test:ci": "tap --no-color --reporter=spec --coverage-report=json --coverage-report=text --100 test/*.test.js test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nearform/fastify-secrets-env.git"
+  },
+  "author": "NearForm Ltd",
+  "license": "Apache-2.0",
+  "keywords": [
+    "fastify",
+    "secrets"
+  ],
+  "bugs": {
+    "url": "https://github.com/nearform/fastify-secrets-env/issues"
+  },
+  "homepage": "https://github.com/nearform/fastify-secrets-env#readme",
+  "engines": {
+    "node": ">= 12.13.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "sinon": "^9.2.0",
+    "tap": "^14.10.8"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:staged",
+      "pre-push": "npm run lint && npm run test"
+    }
+  }
+}
