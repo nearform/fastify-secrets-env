@@ -23,8 +23,8 @@ test('integration', async (t) => {
   })
 
   await fastify.ready()
-
-  t.same(
+  
+  t.has(
     fastify.secrets,
     {
       test1: 'test content 1',
