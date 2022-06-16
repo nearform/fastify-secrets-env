@@ -3,7 +3,7 @@
 const { test } = require('tap')
 const Fastify = require('fastify')
 
-const FastifySecrets = require('../')
+const FastifySecrets = require('../lib/fastify-secrets-env.js')
 
 test('integration', async (t) => {
   t.plan(1)
@@ -24,7 +24,7 @@ test('integration', async (t) => {
 
   await fastify.ready()
 
-  t.same(
+  t.has(
     fastify.secrets,
     {
       test1: 'test content 1',
