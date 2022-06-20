@@ -33,11 +33,11 @@
   "devDependencies": {
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.0.0",
-    "eslint-config-standard": "^16.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^6.0.0",
     "fastify": "^4.0.3",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.1",
@@ -52,8 +52,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:staged",
-      "pre-push": "npm run lint && npm run test"
+      "pre-commit": "npm run lint:staged"
     }
   }
 }
