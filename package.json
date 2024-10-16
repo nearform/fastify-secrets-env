@@ -28,7 +28,7 @@
     "node": ">= 12.13.0"
   },
   "dependencies": {
-    "fastify-secrets-core": "^2.0.0"
+    "fastify-secrets-core": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.18.0",
