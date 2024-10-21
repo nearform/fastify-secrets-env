@@ -1,6 +1,6 @@
 {
   "name": "fastify-secrets-env",
-  "version": "2.1.8",
+  "version": "3.0.0",
   "description": "Fastify secrets plugin for environment variables",
   "main": "lib/fastify-secrets-env.js",
   "scripts": {
