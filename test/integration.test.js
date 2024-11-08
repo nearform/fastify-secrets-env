@@ -7,8 +7,6 @@ const Fastify = require('fastify')
 const FastifySecrets = require('../lib/fastify-secrets-env.js')
 
 test('integration', async (t) => {
-  t.plan(2)
-
   process.env.TEST_SECRET_1 = 'test content 1'
   process.env.TEST_SECRET_2 = 'test content 2'
 

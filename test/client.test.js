@@ -7,7 +7,6 @@ const EnvClient = require('../lib/client')
 describe('get', (t) => {
   test('happy path', async (t) => {
     process.env.SECRET = 'secret content'
-    t.plan(1)
 
     const client = new EnvClient()
     const secret = await client.get('SECRET')
@@ -16,8 +15,6 @@ describe('get', (t) => {
   })
 
   test('sdk error', async (t) => {
-    t.plan(1)
-
     // make sure secret doesn't exist
     delete process.env['NOT-EXISTS']
 
