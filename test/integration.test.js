@@ -1,13 +1,12 @@
 'use strict'
 
-const { test } = require('tap')
+const { test } = require('node:test')
+
 const Fastify = require('fastify')
 
 const FastifySecrets = require('../lib/fastify-secrets-env.js')
 
 test('integration', async (t) => {
-  t.plan(1)
-
   process.env.TEST_SECRET_1 = 'test content 1'
   process.env.TEST_SECRET_2 = 'test content 2'
 
@@ -24,12 +23,6 @@ test('integration', async (t) => {
 
   await fastify.ready()
 
-  t.has(
-    fastify.secrets,
-    {
-      test1: 'test content 1',
-      test2: 'test content 2'
-    },
-    'decorates fastify with secret content'
-  )
+  t.assert.deepStrictEqual(fastify.secrets.test1, 'test content 1', 'decorates fastify with secret content')
+  t.assert.deepStrictEqual(fastify.secrets.test2, 'test content 2', 'decorates fastify with secret content')
 })

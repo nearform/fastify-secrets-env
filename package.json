@@ -7,8 +7,7 @@
     "lint": "eslint lib/**/*.js test/**/*.js",
     "lint:fix": "npm run lint -- --fix",
     "lint:staged": "lint-staged",
-    "test": "tap --reporter=spec --coverage-report=html --coverage-report=text --100 --no-browser test/*.test.js test/**/*.test.js",
-    "test:ci": "tap --no-color --reporter=spec --coverage-report=json --coverage-report=text --100 test/*.test.js test/**/*.test.js"
+    "test": "node --test --experimental-test-coverage test/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -41,8 +40,7 @@
     "fastify": "^5.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.0.1",
-    "prettier": "^3.0.1",
-    "tap": "^16.0.0"
+    "prettier": "^3.0.1"
   },
   "lint-staged": {
     "*.js": [
