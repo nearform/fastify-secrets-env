@@ -4,7 +4,7 @@ const { test, describe } = require('node:test')
 
 const EnvClient = require('../lib/client')
 
-describe('get', (t) => {
+describe('get', () => {
   test('happy path', async (t) => {
     process.env.SECRET = 'secret content'
 
