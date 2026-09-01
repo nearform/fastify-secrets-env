@@ -1,8 +1,6 @@
-'use strict'
+import { describe, test } from 'node:test'
 
-const { test, describe } = require('node:test')
-
-const EnvClient = require('../lib/client')
+import EnvClient from '../lib/client.js'
 
 describe('get', () => {
   test('happy path', async (t) => {
