@@ -1,10 +1,8 @@
-'use strict'
+import { test } from 'node:test'
 
-const { test } = require('node:test')
+import Fastify from 'fastify'
 
-const Fastify = require('fastify')
-
-const FastifySecrets = require('../lib/fastify-secrets-env.js')
+import FastifySecrets from '../lib/fastify-secrets-env.js'
 
 test('integration', async (t) => {
   process.env.TEST_SECRET_1 = 'test content 1'
